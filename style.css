@@ -1,13 +1,13 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* A font that complements this style */
+    font-family: 'Poppins', sans-serif;
     font-weight: normal;
 }
 
 body {
     padding: 0;
     margin: 0 0 40px 0;
-    background: #e0e5ec; /* Classic Neumorphic background color */
+    background: #e0e5ec;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 80px); 
     grid-template-rows: minmax(120px, auto) repeat(8, 60px);
-    gap: 15px; /* Add more space between buttons */
+    gap: 15px;
 }
 
 .calculator-grid > button {
@@ -26,29 +26,28 @@ body {
     font-size: 1.2rem;
     border: none;
     outline: none;
-    border-radius: 20px; /* Softer, more rounded corners */
+    border-radius: 20px;
     background: #e0e5ec;
     color: #555;
     box-shadow: -5px -5px 10px #ffffff, 5px 5px 10px #cbced1;
-    transition: all 0.1s ease-in-out;
+    transition: box-shadow 0.1s ease-in-out;
 }
 
 .calculator-grid > button:active {
     box-shadow: inset -5px -5px 10px #ffffff, inset 5px 5px 10px #cbced1;
-    font-size: 1.15rem; /* Make text slightly smaller on press */
 }
 
 /* Differentiate special buttons by text color */
 [data-operation], [data-sci-operation], [data-parenthesis] {
-    color: #3498db; /* Blue for operators */
+    color: #3498db;
 }
 
 [data-all-clear] {
-    color: #e74c3c; /* Red for clear */
+    color: #e74c3c;
 }
 
 [data-equals] {
-    color: #2ecc71; /* Green for equals */
+    color: #2ecc71;
     font-weight: bold;
 }
 
