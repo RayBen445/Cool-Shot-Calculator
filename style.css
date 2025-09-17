@@ -29,9 +29,9 @@ body {
     border-radius: 20px;
     background: #e0e5ec;
     color: #555;
-    /* This is the default "outward" shadow */
     box-shadow: -5px -5px 10px #ffffff, 5px 5px 10px #cbced1;
     transition: box-shadow 0.1s ease-in-out;
+    -webkit-tap-highlight-color: transparent; /* Add this line */
 }
 
 .calculator-grid > button:active {
