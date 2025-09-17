@@ -1,23 +1,24 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif; /* A font that complements this style */
     font-weight: normal;
 }
 
 body {
     padding: 0;
-    margin: 0 0 40px 0; /* Add bottom margin to prevent footer overlap */
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    margin: 0 0 40px 0;
+    background: #e0e5ec; /* Classic Neumorphic background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .calculator-grid {
     display: grid;
-    justify-content: center;
-    align-content: center;
-    min-height: 100vh;
     grid-template-columns: repeat(4, 80px); 
     grid-template-rows: minmax(120px, auto) repeat(8, 60px);
-    gap: 2px;
+    gap: 15px; /* Add more space between buttons */
 }
 
 .calculator-grid > button {
@@ -25,57 +26,60 @@ body {
     font-size: 1.2rem;
     border: none;
     outline: none;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, .1);
-    color: white;
-    transition: background-color 0.1s ease;
+    border-radius: 20px; /* Softer, more rounded corners */
+    background: #e0e5ec;
+    color: #555;
+    box-shadow: -5px -5px 10px #ffffff, 5px 5px 10px #cbced1;
+    transition: all 0.1s ease-in-out;
 }
 
 .calculator-grid > button:active {
-    background-color: rgba(255, 255, 255, .3);
+    box-shadow: inset -5px -5px 10px #ffffff, inset 5px 5px 10px #cbced1;
+    font-size: 1.15rem; /* Make text slightly smaller on press */
 }
 
-.calculator-grid > button:hover {
-    background-color: rgba(255, 255, 255, .2);
-}
-
+/* Differentiate special buttons by text color */
 [data-operation], [data-sci-operation], [data-parenthesis] {
-    background-color: rgba(131, 196, 226, 0.2);
+    color: #3498db; /* Blue for operators */
 }
 
 [data-all-clear] {
-    background-color: rgba(255, 99, 71, 0.4);
+    color: #e74c3c; /* Red for clear */
 }
 
 [data-equals] {
-    background-color: rgba(60, 179, 113, 0.5);
+    color: #2ecc71; /* Green for equals */
+    font-weight: bold;
 }
 
 .toggle-active {
-    background-color: rgba(131, 196, 226, 0.5);
+    box-shadow: inset -5px -5px 10px #ffffff, inset 5px 5px 10px #cbced1;
+    color: #3498db;
     font-weight: bold;
 }
 
 .output {
     grid-column: 1 / -1;
-    background-color: rgba(0, 0, 0, .75);
+    background: #e0e5ec;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-around;
-    padding: 10px;
+    padding: 20px;
     word-wrap: break-word;
     word-break: break-all;
-    border-radius: 8px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    box-shadow: inset -5px -5px 10px #ffffff, inset 5px 5px 10px #cbced1;
 }
 
 .output .previous-operand {
-    color: rgba(255, 255, 255, .75);
+    color: #7f8c8d;
     font-size: 1.5rem;
 }
 
 .output .current-operand {
-    color: white;
+    color: #2c3e50;
     font-size: 2.5rem;
 }
 
@@ -90,7 +94,7 @@ footer {
     width: 100%;
     text-align: center;
     padding: 10px;
-    color: rgba(255, 255, 255, 0.6);
+    color: #95a5a6;
     font-size: 0.9rem;
-    background-color: #1c2b33;
-                }
+    background-color: #e0e5ec;
+    }
