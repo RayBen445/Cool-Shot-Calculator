@@ -29,14 +29,18 @@ body {
     border-radius: 20px;
     background: #e0e5ec;
     color: #555;
-    box-shadow: -5px -5px 10px #ffffff, 5px 5px 10px #cbced1;
-    transition: box-shadow 0.1s ease-in-out;
-    -webkit-tap-highlight-color: transparent; /* Add this line */
+    /* Deeper, softer shadow for more depth */
+    box-shadow: -6px -6px 12px #ffffff, 6px 6px 12px #cbced1;
+    /* We add 'transform' to the transition so the scaling is smooth */
+    transition: box-shadow 0.1s ease-in-out, transform 0.1s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .calculator-grid > button:active {
-    /* This is the "inward" (pressed) shadow, exactly like the video */
-    box-shadow: inset -5px -5px 10px #ffffff, inset 5px 5px 10px #cbced1;
+    /* Deeper inset shadow */
+    box-shadow: inset -6px -6px 12px #ffffff, inset 6px 6px 12px #cbced1;
+    /* The button will slightly shrink, enhancing the "press" feeling */
+    transform: scale(0.98);
 }
 
 /* Differentiate special buttons by text color */
