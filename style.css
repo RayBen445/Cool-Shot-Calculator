@@ -29,11 +29,13 @@ body {
     border-radius: 20px;
     background: #e0e5ec;
     color: #555;
+    /* This is the default "outward" shadow */
     box-shadow: -5px -5px 10px #ffffff, 5px 5px 10px #cbced1;
     transition: box-shadow 0.1s ease-in-out;
 }
 
 .calculator-grid > button:active {
+    /* This is the "inward" (pressed) shadow, exactly like the video */
     box-shadow: inset -5px -5px 10px #ffffff, inset 5px 5px 10px #cbced1;
 }
 
@@ -52,6 +54,7 @@ body {
 }
 
 .toggle-active {
+    /* The active state for toggles is also the pressed-in look */
     box-shadow: inset -5px -5px 10px #ffffff, inset 5px 5px 10px #cbced1;
     color: #3498db;
     font-weight: bold;
